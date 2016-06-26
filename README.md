@@ -1,2 +1,2 @@
 # context-menu
-contextmenu js
+download or clone repo and play with it.
