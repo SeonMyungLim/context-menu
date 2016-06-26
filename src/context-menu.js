@@ -98,13 +98,17 @@
         var that = this;
         elem = $(elem);
         disableContextMenu(elem);
-        elem.contextmenu(function(e) {
+        elem.bind('contextmenu' ,function(e) {
             that.show(options, className, e);
         });
     };
 
+    ctx.unbindContextMenu = function(elem) {
+        elem.unbind('contextmenu');
+    };
+
     function disableContextMenu(dom) {
-        dom.contextmenu(function(e) {
+        dom.bind('contextmenu' ,function(e) {
             e.preventDefault();
         });
     }
